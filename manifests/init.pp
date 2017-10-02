@@ -39,7 +39,7 @@ class motd (
         line   => 'session    optional     pam_motd.so  motd=/run/motd.dynamic noupdate',
       }
     }
-  } elsif $::kernel == 'windows' {
+   }elsif $::kernel == 'windows' {
     registry_value { 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\policies\system\legalnoticecaption':
       ensure => present,
       type   => string,
